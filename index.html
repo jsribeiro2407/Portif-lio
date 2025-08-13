@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio - Juliana Ribeiro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">JR</div>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <button class="contact">Contate-me</button>
+</header>
+
+<section id="home" class="home-section active">
+  <div class="slogan" id="slogan"></div>
+  <main>
+    <section class="info">
+      <h1>MUITO PRAZER,</h1>
+      <h2 id="name"></h2>
+      <p>
+        Sou Juliana Ribeiro, estudante de Ciência e Tecnologia (BICT).
+        Comecei na programação pelo front-end, com HTML, CSS e JavaScript,
+        e hoje estou migrando para a área de dados, focando em análise e
+        visualização com Python, Pandas e SQL.
+      </p>
+    </section>
+    <section class="foto">
+      <div class="circle">
+        <img src="fotojuliana.png" alt="Foto de Juliana Ribeiro" class="profile-img" />
+      </div>
+    </section>
+  </main>
+</section>
+
+<section id="projetos" class="projects-section">
+  <h2>PROJETOS</h2>
+  <div class="projects-container">
+    <a href="https://github.com/usuario/projeto1" target="_blank" rel="noopener" class="project-card">
+      <img src="projeto1.jpg" alt="Projeto 1" class="project-image" />
+      <div class="project-info">
+        <h3>Projeto Legal 1</h3>
+        <p>Janeiro 2024</p>
+      </div>
+    </a>
+    <a href="https://github.com/usuario/projeto2" target="_blank" rel="noopener" class="project-card">
+      <img src="projeto2.jpg" alt="Projeto 2" class="project-image" />
+      <div class="project-info">
+        <h3>Projeto Legal 2</h3>
+        <p>Fevereiro 2024</p>
+      </div>
+    </a>
+    <a href="https://github.com/usuario/projeto3" target="_blank" rel="noopener" class="project-card">
+      <img src="projeto3.jpg" alt="Projeto 3" class="project-image" />
+      <div class="project-info">
+        <h3>Projeto Legal 3</h3>
+        <p>Março 2024</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section id="habilidades" class="habilidades-section">
+  <h2>HABILIDADES</h2>
+  <div class="carousel" id="carousel">
+    
+  <div class="habilidade-card">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+  </div>
+  <div class="habilidade-card">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+  </div>
+  <div class="habilidade-card">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+  </div>
+  <div class="habilidade-card">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+  </div>
+  <div class="habilidade-card">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+  </div>
+  <div class="habilidade-card">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+  </div>
+  <div class="habilidade-card">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+  </div>
+  
+  </div>
+</section>
+
+<section id="contato" class="contato-section">
+  <h2>CONTATO</h2>
+  <form id="formContato" novalidate>
+    <label for="nomeContato">Nome</label>
+    <input type="text" id="nomeContato" name="nomeContato" placeholder="Seu nome" required />
+
+    <label for="emailContato">E-mail</label>
+    <input type="email" id="emailContato" name="emailContato" placeholder="Seu e-mail" required />
+
+    <label for="mensagemContato">Mensagem</label>
+    <textarea id="mensagemContato" name="mensagemContato" placeholder="Sua mensagem" rows="5" required></textarea>
+
+    <button type="submit">Enviar</button>
+    <p class="form-message" id="formMsg"></p>
+  </form>
+</section>
+
+<button id="btnTopo" title="Voltar ao topo">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
