@@ -32,8 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Scroll suave, ativar link ativo no menu e botão "Contate-me"
   const linksMenu = document.querySelectorAll('nav a');
   const btnContato = document.querySelector('.contact');
-  
-  // ADICIONADO O LOGO LINK AQUI
   const logoLink = document.querySelector('.logo-link');
 
   function scrollToSection(sectionId) {
@@ -57,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  // ADICIONADO O EVENTO DE CLIQUE PARA O LOGO
   if (logoLink) {
     logoLink.addEventListener('click', e => {
       e.preventDefault();
@@ -174,16 +171,17 @@ document.addEventListener("DOMContentLoaded", () => {
     highlightObserver.observe(highlightSpan);
   }
 
-  // LÓGICA DO CARROSSEL DE PROJETOS
+  // LÓGICA DO CARROSSEL DE PROJETOS (CORRIGIDA)
   function setupCarousel(containerId, leftArrowId, rightArrowId) {
     const container = document.getElementById(containerId);
     const leftArrow = document.getElementById(leftArrowId);
     const rightArrow = document.getElementById(rightArrowId);
 
     if (!container || !leftArrow || !rightArrow) {
-      return;
+      return; // Sai da função se algum elemento não for encontrado
     }
 
+    // A LÓGICA DAS SETAS FICA AQUI FORA DO 'IF'
     const updateArrows = () => {
       const maxScroll = container.scrollWidth - container.clientWidth;
       
@@ -192,12 +190,12 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     leftArrow.addEventListener('click', () => {
-      const scrollAmount = (container.querySelector('.project-card').offsetWidth + 30) * 3;
+      const scrollAmount = container.querySelector('.project-card').offsetWidth + 30;
       container.scrollLeft -= scrollAmount;
     });
 
     rightArrow.addEventListener('click', () => {
-      const scrollAmount = (container.querySelector('.project-card').offsetWidth + 30) * 3;
+      const scrollAmount = container.querySelector('.project-card').offsetWidth + 30;
       container.scrollLeft += scrollAmount;
     });
 

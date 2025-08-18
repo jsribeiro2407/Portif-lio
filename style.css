@@ -215,7 +215,7 @@ main {
   left: 0;
   bottom: 4px;
   width: 100%;
-  height: 75%;
+  height: 85%;
   z-index: -1;
   background-color: var(--highlight-color);
   transform-origin: left;
@@ -261,7 +261,7 @@ main {
   overflow: hidden;
   border: 5px solid var(--primary-accent);
   animation: float 4s ease-in-out infinite;
-  /* MODIFIQUE A LINHA ABAIXO */
+ 
   transition: transform 0.3s ease-in-out, border-color 0.3s, background-color 0.3s;
   cursor: default;
   display: flex;
@@ -625,4 +625,120 @@ body.light-mode nav a:hover {
 
 body.light-mode nav a:hover::after {
   background: #f89ea9;
+}
+
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    position: static; /* Header deixa de ser fixo */
+  }
+
+  main {
+    flex-direction: column-reverse; /* Imagem fica em cima do texto */
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .info {
+    padding-left: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .projects-wrapper {
+    max-width: 700px; /* Mostra 2 cards por vez */
+  }
+}
+
+
+@media (max-width: 768px) {
+  header {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o menu quebre a linha se necessário */
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  .slogan {
+    font-size: 1.1rem;
+    margin: 20px 10px;
+  }
+
+  .info h1 {
+    font-size: 2rem;
+  }
+
+  .info h2 {
+    font-size: 2.2rem;
+  }
+  
+  .info p {
+    font-size: 1.1rem;
+  }
+
+  .circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .projects-section h2 {
+    font-size: 2rem;
+  }
+  
+  /* Faz o carrossel de projetos ocupar a largura toda */
+  .projects-wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .projects-container {
+    padding: 20px 15px;
+  }
+  
+  .arrow-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .left-arrow {
+    left: 5px;
+  }
+
+  .right-arrow {
+    right: 5px;
+  }
+  
+  .habilidade-card {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .habilidade-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contato-section {
+    margin: 60px 20px;
+    padding: 20px;
+  }
+  
+  footer .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 0; 
+  }
 }
