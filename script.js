@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Animação digitação do slogan
   const sloganText = "-> DEV EM MOVIMENTO: DO FRONT-END PARA DADOS <-";
   const sloganEl = document.getElementById("slogan");
   if(sloganEl) {
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     escreverSlogan();
   }
 
-  // Animação digitação do nome
+ 
   const nome = "JULIANA RIBEIRO";
   const nomeEl = document.getElementById("name");
   if(nomeEl){
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(escreverNome, 500);
   }
 
-  // Scroll suave, ativar link ativo no menu e botão "Contate-me"
+  
   const linksMenu = document.querySelectorAll('nav a');
   const btnContato = document.querySelector('.contact');
   const logoLink = document.querySelector('.logo-link');
@@ -68,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Animação dos cards de projetos ao aparecer na viewport
+ 
   const cards = document.querySelectorAll(".project-card");
   const cardsObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -80,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.1 });
   cards.forEach(card => cardsObserver.observe(card));
 
-  // Carrossel infinito de habilidades com JS
+
   const carousel = document.getElementById("carousel");
   if (carousel) {
       carousel.innerHTML += carousel.innerHTML;
@@ -106,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       carouselContainer.addEventListener("mouseleave", () => { isPaused = false; });
   }
   
-  // Validação e envio do formulário
+ 
   const form = document.getElementById('formContato');
   const formMessage = document.getElementById('formMsg');
 
@@ -127,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Botão voltar ao topo
+
   const btnTopo = document.getElementById('btnTopo');
   if(btnTopo){
     window.addEventListener('scroll', () => {
@@ -139,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Lógica para Modo Claro / Escuro
+ 
   const themeToggle = document.getElementById('theme-toggle');
   const body = document.body;
   if(themeToggle) {
@@ -157,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   
-  // Lógica para ativar a animação do marcador de texto
+
   const highlightSpan = document.querySelector('.highlight-animation');
   if (highlightSpan) {
     const highlightObserver = new IntersectionObserver(entries => {
@@ -171,17 +170,16 @@ document.addEventListener("DOMContentLoaded", () => {
     highlightObserver.observe(highlightSpan);
   }
 
-  // LÓGICA DO CARROSSEL DE PROJETOS (CORRIGIDA)
+
   function setupCarousel(containerId, leftArrowId, rightArrowId) {
     const container = document.getElementById(containerId);
     const leftArrow = document.getElementById(leftArrowId);
     const rightArrow = document.getElementById(rightArrowId);
 
     if (!container || !leftArrow || !rightArrow) {
-      return; // Sai da função se algum elemento não for encontrado
+      return; 
     }
-
-    // A LÓGICA DAS SETAS FICA AQUI FORA DO 'IF'
+    
     const updateArrows = () => {
       const maxScroll = container.scrollWidth - container.clientWidth;
       
